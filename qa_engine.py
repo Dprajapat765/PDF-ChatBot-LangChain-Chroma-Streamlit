@@ -13,11 +13,11 @@ def get_qa_chain(vectorstore):
         if not api_key:
             raise ValueError("OPENAI_API_KEY not found.")
 
-        # Use GPT-3.5 or GPT-4 depending on your plan
+        
         llm = ChatOpenAI(
             openai_api_key=api_key,
             temperature=0.7,
-            model="gpt-3.5-turbo"  # or "gpt-4" if you have access
+            model="gpt-3.5-turbo"  # or "gpt-4" 
         )
 
         qa_chain = RetrievalQA.from_chain_type(
